@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://niujkusfkuo3"]
+
+[ext_resource type="Texture2D" uid="uid://bddjt4wjclbcl" path="res://sprites/Gui/bg.jpg" id="1_b4h60"]
+[ext_resource type="Script" uid="uid://cisf242td0mg0" path="res://scripts/Gui/main_menu.gd" id="1_kebck"]
+[ext_resource type="FontFile" uid="uid://b6oyki7w2rs16" path="res://Fonts/upheaval/upheavtt.ttf" id="2_b4h60"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kebck"]
+font = ExtResource("2_b4h60")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_b4h60"]
+font = ExtResource("2_b4h60")
+
+[node name="main_menu" type="Node2D" unique_id=1478965594]
+script = ExtResource("1_kebck")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1905247825]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=342981591]
+modulate = Color(0.81537366, 0.81537366, 0.81537366, 1)
+offset_left = -70.0
+offset_right = 701.0
+offset_bottom = 360.0
+texture = ExtResource("1_b4h60")
+
+[node name="Titulo" type="Label" parent="CanvasLayer" unique_id=1345678505]
+offset_top = 60.0
+offset_right = 640.0
+offset_bottom = 140.0
+text = "tecars"
+label_settings = SubResource("LabelSettings_kebck")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play_button" type="Button" parent="CanvasLayer" unique_id=665426998]
+offset_left = 272.0
+offset_top = 160.0
+offset_right = 368.0
+offset_bottom = 208.0
+text = "
+"
+icon_alignment = 1
+
+[node name="play_label" type="Label" parent="CanvasLayer/play_button" unique_id=2010982176]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 49.0
+text = "Play"
+label_settings = SubResource("LabelSettings_b4h60")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2_player_play" type="Button" parent="CanvasLayer" unique_id=1362399595]
+offset_left = 272.0
+offset_top = 216.0
+offset_right = 368.0
+offset_bottom = 264.0
+text = "
+"
+
+[node name="2_player_label" type="Label" parent="CanvasLayer/2_player_play" unique_id=1703574346]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 49.0
+text = "2 Players"
+label_settings = SubResource("LabelSettings_b4h60")
+horizontal_alignment = 1
+vertical_alignment = 1

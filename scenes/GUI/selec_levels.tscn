@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://cmxvpw07rhqj3"]
+
+[ext_resource type="Script" uid="uid://b5bgiso5w71x" path="res://scripts/Gui/selec_levels_script.gd" id="1_dfumm"]
+[ext_resource type="Texture2D" uid="uid://bddjt4wjclbcl" path="res://sprites/Gui/bg.jpg" id="1_s6amr"]
+[ext_resource type="FontFile" uid="uid://b6oyki7w2rs16" path="res://Fonts/upheaval/upheavtt.ttf" id="2_dfumm"]
+[ext_resource type="Texture2D" uid="uid://besr31ghrbvj3" path="res://sprites/cars/car_black_small_1.png" id="3_dpv88"]
+[ext_resource type="Texture2D" uid="uid://b376wolldxndl" path="res://sprites/cars/car_blue_small_1.png" id="4_sx1ni"]
+[ext_resource type="Texture2D" uid="uid://hxrwv87d3ygk" path="res://sprites/cars/car_green_small_1.png" id="5_ma1qi"]
+[ext_resource type="Texture2D" uid="uid://bumlhhetubf8g" path="res://sprites/cars/car_red_small_1.png" id="6_g7dhe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v3sgl"]
+font = ExtResource("2_dfumm")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nfvl7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dpv88")
+}],
+"loop": true,
+"name": &"car_black",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sx1ni")
+}],
+"loop": true,
+"name": &"car_blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ma1qi")
+}],
+"loop": true,
+"name": &"car_green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_g7dhe")
+}],
+"loop": true,
+"name": &"car_red",
+"speed": 5.0
+}]
+
+[node name="selec_levels" type="Node2D" unique_id=1239271197]
+script = ExtResource("1_dfumm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=797241429]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=464363286]
+modulate = Color(0.81537366, 0.81537366, 0.81537366, 1)
+offset_left = -70.0
+offset_right = 701.0
+offset_bottom = 360.0
+texture = ExtResource("1_s6amr")
+
+[node name="nxt_skin_btn" type="Button" parent="CanvasLayer" unique_id=211425295]
+offset_left = 384.0
+offset_top = 96.0
+offset_right = 448.0
+offset_bottom = 144.0
+text = "
+"
+icon_alignment = 1
+
+[node name="nxt_skin_btn_label" type="Label" parent="CanvasLayer/nxt_skin_btn" unique_id=349627497]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 49.0
+text = ">"
+label_settings = SubResource("LabelSettings_v3sgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bck_skin_btn" type="Button" parent="CanvasLayer" unique_id=1434943868]
+offset_left = 192.0
+offset_top = 96.0
+offset_right = 256.0
+offset_bottom = 144.0
+text = "
+"
+icon_alignment = 1
+
+[node name="bck_skin_btn_label" type="Label" parent="CanvasLayer/bck_skin_btn" unique_id=1221457332]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 48.0
+text = "<"
+label_settings = SubResource("LabelSettings_v3sgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nivel_1" type="Button" parent="CanvasLayer" unique_id=1568749550]
+offset_left = 272.0
+offset_top = 160.0
+offset_right = 368.0
+offset_bottom = 208.0
+text = "
+"
+icon_alignment = 1
+
+[node name="nivel_1_label" type="Label" parent="CanvasLayer/nivel_1" unique_id=1453093778]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 49.0
+text = "Lvl. 1"
+label_settings = SubResource("LabelSettings_v3sgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nivel_2" type="Button" parent="CanvasLayer" unique_id=1424803265]
+offset_left = 272.0
+offset_top = 216.0
+offset_right = 368.0
+offset_bottom = 264.0
+text = "
+"
+
+[node name="nivel_2_label" type="Label" parent="CanvasLayer/nivel_2" unique_id=801555474]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 49.0
+text = "lvl. 2"
+label_settings = SubResource("LabelSettings_v3sgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nivel_3" type="Button" parent="CanvasLayer" unique_id=430349022]
+offset_left = 272.0
+offset_top = 272.0
+offset_right = 368.0
+offset_bottom = 320.0
+text = "
+"
+
+[node name="nivel_3_label" type="Label" parent="CanvasLayer/nivel_3" unique_id=1997424174]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 49.0
+text = "lvl. 3"
+label_settings = SubResource("LabelSettings_v3sgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=211169329]
+position = Vector2(320, 120)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_nfvl7")
+animation = &"car_red"

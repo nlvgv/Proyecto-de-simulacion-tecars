@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dt6eahumhl2lg"]
+
+[ext_resource type="Script" uid="uid://ceab7jgr44hhq" path="res://scripts/area_2d_obstacle.gd" id="1_i4xvc"]
+[ext_resource type="Texture2D" uid="uid://besr31ghrbvj3" path="res://sprites/cars/car_black_small_1.png" id="1_sh7k1"]
+[ext_resource type="Texture2D" uid="uid://b376wolldxndl" path="res://sprites/cars/car_blue_small_1.png" id="2_i4xvc"]
+[ext_resource type="Texture2D" uid="uid://hxrwv87d3ygk" path="res://sprites/cars/car_green_small_1.png" id="3_5oy3q"]
+[ext_resource type="Texture2D" uid="uid://bumlhhetubf8g" path="res://sprites/cars/car_red_small_1.png" id="4_0drx6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcfqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sh7k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i4xvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5oy3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0drx6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4pg3"]
+size = Vector2(16, 32)
+
+[node name="Obstacle" type="Node2D" unique_id=2074709989]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=106314863]
+script = ExtResource("1_i4xvc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=669892362]
+rotation = -3.1415925
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_bcfqo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2017900936]
+shape = SubResource("RectangleShape2D_u4pg3")

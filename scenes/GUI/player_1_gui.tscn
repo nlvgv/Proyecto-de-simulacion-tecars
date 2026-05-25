@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://4wdxc3n4hgcl"]
+
+[ext_resource type="Script" uid="uid://bdbtiw8el8cob" path="res://canvas_layer.gd" id="1_i8g03"]
+[ext_resource type="Texture2D" uid="uid://4kakgs0vsq1w" path="res://sprites/Gui/bar_round_gloss_large.png" id="2_526jy"]
+[ext_resource type="FontFile" uid="uid://b6oyki7w2rs16" path="res://Fonts/upheaval/upheavtt.ttf" id="3_174kg"]
+[ext_resource type="Texture2D" uid="uid://b2o23ronjcb2j" path="res://sprites/Gui/heart_bg.png" id="3_wp4j1"]
+[ext_resource type="Texture2D" uid="uid://cqgt517rh5l28" path="res://sprites/Gui/heart.png" id="4_174kg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ggu4s"]
+font = ExtResource("3_174kg")
+font_size = 8
+
+[node name="player_1_gui" type="Node2D" unique_id=1805784499]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=655879683]
+script = ExtResource("1_i8g03")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2140281933]
+offset_left = 536.0
+offset_top = 8.0
+offset_right = 632.0
+offset_bottom = 32.0
+texture = ExtResource("2_526jy")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=17359074]
+z_index = 1
+offset_left = 544.0
+offset_top = 8.0
+offset_right = 624.0
+offset_bottom = 32.0
+text = "Score p1"
+label_settings = SubResource("LabelSettings_ggu4s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="heart_bg" type="TextureRect" parent="CanvasLayer" unique_id=989587457]
+offset_left = 536.0
+offset_top = 32.0
+offset_right = 632.0
+offset_bottom = 56.0
+texture = ExtResource("3_wp4j1")
+stretch_mode = 1
+
+[node name="hearts" type="TextureRect" parent="CanvasLayer" unique_id=889842998]
+offset_left = 536.0
+offset_top = 32.0
+offset_right = 632.0
+offset_bottom = 56.0
+texture = ExtResource("4_174kg")
+stretch_mode = 1

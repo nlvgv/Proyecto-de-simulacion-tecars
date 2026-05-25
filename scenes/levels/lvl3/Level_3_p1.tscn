@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://fi38cn1icv7u"]
+
+[ext_resource type="PackedScene" uid="uid://cf7iplfgi53y2" path="res://scenes/player.tscn" id="1_y6vyx"]
+[ext_resource type="PackedScene" uid="uid://dt6eahumhl2lg" path="res://scenes/obstacle.tscn" id="2_xdipw"]
+[ext_resource type="PackedScene" uid="uid://4wdxc3n4hgcl" path="res://scenes/GUI/player_1_gui.tscn" id="3_lpx4f"]
+[ext_resource type="PackedScene" uid="uid://b8enp4fotixe3" path="res://scenes/levels/lvl3/bg_3.tscn" id="4_5nat5"]
+
+[node name="test" type="Node2D" unique_id=1449276941]
+
+[node name="Player" parent="." unique_id=1553205913 instance=ExtResource("1_y6vyx")]
+z_index = 1
+position = Vector2(320, 304)
+
+[node name="Obstacle" parent="." unique_id=2074709989 instance=ExtResource("2_xdipw")]
+position = Vector2(384, -32)
+
+[node name="Obstacle2" parent="." unique_id=237042888 instance=ExtResource("2_xdipw")]
+position = Vector2(256, -96)
+
+[node name="Obstacle3" parent="." unique_id=365244080 instance=ExtResource("2_xdipw")]
+position = Vector2(384, -160)
+
+[node name="Obstacle4" parent="." unique_id=1148686822 instance=ExtResource("2_xdipw")]
+position = Vector2(256, -224)
+
+[node name="Obstacle5" parent="." unique_id=300667069 instance=ExtResource("2_xdipw")]
+position = Vector2(384, -288)
+
+[node name="Obstacle6" parent="." unique_id=1177845042 instance=ExtResource("2_xdipw")]
+position = Vector2(320, -352)
+
+[node name="player_1_gui" parent="." unique_id=1805784499 instance=ExtResource("3_lpx4f")]
+
+[node name="bg_1" parent="." unique_id=1315618755 instance=ExtResource("4_5nat5")]
+
+[node name="bg_2" parent="." unique_id=1807626499 instance=ExtResource("4_5nat5")]
+position = Vector2(0, -384)
