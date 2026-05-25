@@ -7,6 +7,8 @@
 [sub_resource type="LabelSettings" id="LabelSettings_kebck"]
 font = ExtResource("2_b4h60")
 font_size = 70
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_b4h60"]
 font = ExtResource("2_b4h60")
@@ -24,18 +26,18 @@ offset_bottom = 360.0
 texture = ExtResource("1_b4h60")
 
 [node name="Titulo" type="Label" parent="CanvasLayer" unique_id=1345678505]
-offset_top = 60.0
+offset_top = 40.0
 offset_right = 640.0
-offset_bottom = 140.0
+offset_bottom = 120.0
 text = "tecars"
 label_settings = SubResource("LabelSettings_kebck")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="play_button" type="Button" parent="CanvasLayer" unique_id=665426998]
-offset_left = 272.0
+offset_left = 248.0
 offset_top = 160.0
-offset_right = 368.0
+offset_right = 392.0
 offset_bottom = 208.0
 text = "
 "
@@ -43,7 +45,7 @@ icon_alignment = 1
 
 [node name="play_label" type="Label" parent="CanvasLayer/play_button" unique_id=2010982176]
 layout_mode = 0
-offset_right = 96.0
+offset_right = 144.0
 offset_bottom = 49.0
 text = "Play"
 label_settings = SubResource("LabelSettings_b4h60")
@@ -51,16 +53,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="2_player_play" type="Button" parent="CanvasLayer" unique_id=1362399595]
-offset_left = 272.0
+offset_left = 248.0
 offset_top = 216.0
-offset_right = 368.0
+offset_right = 392.0
 offset_bottom = 264.0
 text = "
 "
 
 [node name="2_player_label" type="Label" parent="CanvasLayer/2_player_play" unique_id=1703574346]
 layout_mode = 0
-offset_right = 96.0
+offset_right = 144.0
 offset_bottom = 49.0
 text = "2 Players"
 label_settings = SubResource("LabelSettings_b4h60")

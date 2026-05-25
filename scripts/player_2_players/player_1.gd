@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D
-@onready var audio = $AudioStreamPlayer2D
 
 const SPEED = 3.0
 
@@ -12,7 +11,6 @@ var max_grinds = 1
 
 var points = 0
 
-
 func _ready() -> void:
 	GameManager.in_game = true
 	GameManager.game_speed=0
@@ -20,16 +18,7 @@ func _ready() -> void:
 	GameManager.player_1_lives = 3
 	GameManager.player_2_score = 0
 	GameManager.player_2_lives = 3
-	
-	match GameManager.player_1_skin:
-		1:
-			sprite.animation = "car_black"
-		2:
-			sprite.animation = "car_blue"
-		3:
-			sprite.animation = "car_green"
-		4:
-			sprite.animation = "car_red"
+	sprite.animation = "car_red"
 
 
 func _physics_process(delta: float) -> void:
@@ -50,20 +39,22 @@ func _physics_process(delta: float) -> void:
 		
 	position.x = move_toward(position.x, move_dest, SPEED)
 	
-	if GameManager.player_1_lives <= 0:
-		get_tree().change_scene_to_file("res://scenes/GUI/p_1_game_over.tscn")
+	if GameManager.player_1_lives <= 0 and GameManager.player_2_lives <= 0:
+		get_tree().change_scene_to_file("res://scenes/GUI/p_2_players_game_over.tscn")
 	
 	if GameManager.player_1_coll and GameManager.player_1_lives >= 1:
 		player_col()
 	else:
 		sprite.modulate.a = 1
+	
+	if GameManager.player_1_lives < 1:
+		sprite.modulate.a = 0
+	
 	move_and_slide()
 
 func player_col():
-	if not audio.playing:
-		audio.play()
 	for i in range(3):
-		sprite.modulate.a = 0.2
-		await get_tree().create_timer(0.2).timeout
+		sprite.modulate.a = 0.4
+		await get_tree().create_timer(0.1).timeout
 		sprite.modulate.a = 1.0 
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.1).timeout

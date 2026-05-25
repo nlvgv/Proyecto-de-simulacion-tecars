@@ -146,6 +146,23 @@ label_settings = SubResource("LabelSettings_v3sgl")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="back_btn" type="Button" parent="CanvasLayer" unique_id=833598887]
+offset_left = 536.0
+offset_top = 304.0
+offset_right = 632.0
+offset_bottom = 352.0
+text = "
+"
+
+[node name="nivel_3_label" type="Label" parent="CanvasLayer/back_btn" unique_id=1161752899]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 49.0
+text = "back"
+label_settings = SubResource("LabelSettings_v3sgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=211169329]
 position = Vector2(320, 120)
 scale = Vector2(0.8, 0.8)

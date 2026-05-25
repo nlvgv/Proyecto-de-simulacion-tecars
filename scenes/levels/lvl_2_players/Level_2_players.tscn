@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dvem6mpm1xv2l"]
+
+[ext_resource type="PackedScene" uid="uid://dt6eahumhl2lg" path="res://scenes/obstacle.tscn" id="3_ngimp"]
+[ext_resource type="PackedScene" uid="uid://b5bulgt1vy7ie" path="res://scenes/GUI/2_players_gui.tscn" id="4_dcpwf"]
+[ext_resource type="PackedScene" uid="uid://23w0bgjby1ro" path="res://scenes/levels/lvl_2_players/player_p2.tscn" id="4_h5d12"]
+[ext_resource type="PackedScene" uid="uid://ce1x7tqexju1p" path="res://scenes/levels/lvl_2_players/bg_2_players.tscn" id="5_56f7j"]
+[ext_resource type="PackedScene" uid="uid://u4d80cjhhl4w" path="res://scenes/GUI/music_player.tscn" id="6_6fh2b"]
+[ext_resource type="PackedScene" uid="uid://bltfy0shyb2ix" path="res://scenes/levels/lvl_2_players/player_p1.tscn" id="6_qrq8c"]
+
+[node name="level_3_p1" type="Node2D" unique_id=1449276941]
+
+[node name="bg_1" parent="." unique_id=1315618755 instance=ExtResource("5_56f7j")]
+
+[node name="bg_2" parent="." unique_id=1807626499 instance=ExtResource("5_56f7j")]
+position = Vector2(0, -384)
+
+[node name="Player_p1" parent="." unique_id=1553205913 instance=ExtResource("6_qrq8c")]
+position = Vector2(480, 312)
+
+[node name="Player_p2" parent="." unique_id=2073440621 instance=ExtResource("4_h5d12")]
+position = Vector2(160, 312)
+
+[node name="2_players_gui" parent="." unique_id=1805784499 instance=ExtResource("4_dcpwf")]
+position = Vector2(484.0228, -58.240143)
+
+[node name="Obstacle" parent="." unique_id=2074709989 instance=ExtResource("3_ngimp")]
+position = Vector2(160, -64)
+metadata/inicial_pos = 160
+metadata/p2 = true
+
+[node name="Obstacle2" parent="." unique_id=1333375942 instance=ExtResource("3_ngimp")]
+position = Vector2(480, -64)
+metadata/inicial_pos = 480
+
+[node name="Obstacle3" parent="." unique_id=1961734367 instance=ExtResource("3_ngimp")]
+position = Vector2(160, -192)
+metadata/inicial_pos = 160
+metadata/p2 = true
+
+[node name="Obstacle4" parent="." unique_id=280381086 instance=ExtResource("3_ngimp")]
+position = Vector2(480, -192)
+metadata/inicial_pos = 480
+
+[node name="Obstacle5" parent="." unique_id=1927854110 instance=ExtResource("3_ngimp")]
+position = Vector2(160, -320)
+metadata/inicial_pos = 160
+metadata/p2 = true
+
+[node name="Obstacle6" parent="." unique_id=2098176983 instance=ExtResource("3_ngimp")]
+position = Vector2(480, -320)
+metadata/inicial_pos = 480
+
+[node name="music_player" parent="." unique_id=676809745 instance=ExtResource("6_6fh2b")]
+position = Vector2(0, 8)

@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://dajtqfe5jauwy"]
 
 [ext_resource type="PackedScene" uid="uid://cf7iplfgi53y2" path="res://scenes/player.tscn" id="1_7log7"]
+[ext_resource type="Script" uid="uid://33ypp0ax5by6" path="res://scenes/levels/lvl1/level_1_p_1_script.gd" id="1_cakqc"]
 [ext_resource type="PackedScene" uid="uid://ctpswk5ykfwtg" path="res://scenes/levels/lvl1/bg_1.tscn" id="2_cakqc"]
 [ext_resource type="PackedScene" uid="uid://dt6eahumhl2lg" path="res://scenes/obstacle.tscn" id="3_ja52n"]
 [ext_resource type="PackedScene" uid="uid://4wdxc3n4hgcl" path="res://scenes/GUI/player_1_gui.tscn" id="4_xudln"]
+[ext_resource type="FontFile" uid="uid://b6oyki7w2rs16" path="res://Fonts/upheaval/upheavtt.ttf" id="6_ja52n"]
+[ext_resource type="PackedScene" uid="uid://u4d80cjhhl4w" path="res://scenes/GUI/music_player.tscn" id="7_xudln"]
 
-[node name="test" type="Node2D" unique_id=1449276941]
+[sub_resource type="LabelSettings" id="LabelSettings_xudln"]
+font = ExtResource("6_ja52n")
+
+[node name="level_1_p1" type="Node2D" unique_id=1449276941]
+script = ExtResource("1_cakqc")
 
 [node name="Player" parent="." unique_id=1553205913 instance=ExtResource("1_7log7")]
 z_index = 1
@@ -17,9 +24,24 @@ position = Vector2(320, 304)
 position = Vector2(0, -384)
 
 [node name="Obstacle" parent="." unique_id=2074709989 instance=ExtResource("3_ja52n")]
-position = Vector2(384, -32)
+position = Vector2(320, -32)
+metadata/inicial_pos = 320
 
 [node name="Obstacle2" parent="." unique_id=237042888 instance=ExtResource("3_ja52n")]
 position = Vector2(320, -224)
+metadata/inicial_pos = 320
 
 [node name="player_1_gui" parent="." unique_id=1805784499 instance=ExtResource("4_xudln")]
+
+[node name="meta" type="Label" parent="." unique_id=209226436]
+offset_left = 536.0
+offset_top = 56.0
+offset_right = 632.0
+offset_bottom = 79.0
+text = "0/30"
+label_settings = SubResource("LabelSettings_xudln")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="music_player" parent="." unique_id=676809745 instance=ExtResource("7_xudln")]
+position = Vector2(16, 16)

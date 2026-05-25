@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt6eahumhl2lg"]
 
-[ext_resource type="Script" uid="uid://ceab7jgr44hhq" path="res://scripts/area_2d_obstacle.gd" id="1_i4xvc"]
+[ext_resource type="Script" uid="uid://ceab7jgr44hhq" path="res://scripts/obstacle_script.gd" id="1_i4xvc"]
 [ext_resource type="Texture2D" uid="uid://besr31ghrbvj3" path="res://sprites/cars/car_black_small_1.png" id="1_sh7k1"]
 [ext_resource type="Texture2D" uid="uid://b376wolldxndl" path="res://sprites/cars/car_blue_small_1.png" id="2_i4xvc"]
 [ext_resource type="Texture2D" uid="uid://hxrwv87d3ygk" path="res://sprites/cars/car_green_small_1.png" id="3_5oy3q"]
@@ -30,6 +30,8 @@ animations = [{
 size = Vector2(16, 32)
 
 [node name="Obstacle" type="Node2D" unique_id=2074709989]
+metadata/inicial_pos = 0
+metadata/p2 = false
 
 [node name="Area2D" type="Area2D" parent="." unique_id=106314863]
 script = ExtResource("1_i4xvc")

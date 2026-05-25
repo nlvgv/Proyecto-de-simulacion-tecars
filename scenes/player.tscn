@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://fr1cl4kjbekg" path="res://scripts/player_script.gd" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://besr31ghrbvj3" path="res://sprites/cars/car_black_small_1.png" id="2_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://b10n8nx7hmwoa" path="res://sounds/pluck_001.ogg" id="2_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://b376wolldxndl" path="res://sprites/cars/car_blue_small_1.png" id="3_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://hxrwv87d3ygk" path="res://sprites/cars/car_green_small_1.png" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://bumlhhetubf8g" path="res://sprites/cars/car_red_small_1.png" id="5_fjrip"]
@@ -49,11 +50,17 @@ size = Vector2(16, 13)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1122064392 groups=["player"]]
 script = ExtResource("2_g2els")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CharacterBody2D" unique_id=461505308]
+stream = ExtResource("2_tuyoq")
+volume_db = -10.0
+pitch_scale = 0.3
+max_polyphony = 9
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=963360600]
 position = Vector2(2.3841858e-07, 4.7683716e-07)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_g2els")
-animation = &"car_red"
+animation = &"car_black"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1864556445 groups=["player"]]
 position = Vector2(0, -6.5)

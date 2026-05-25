@@ -3,6 +3,8 @@ extends Node2D
 @onready var next_skin = $CanvasLayer/nxt_skin_btn
 @onready var back_skin = $CanvasLayer/bck_skin_btn
 
+@onready var back = $CanvasLayer/back_btn
+
 @onready var skin_show = $CanvasLayer/AnimatedSprite2D
 
 @onready var lvl_1 = $CanvasLayer/nivel_1
@@ -53,5 +55,8 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/levels/lvl2/Level_2_p1.tscn")	
 	if lvl_3.button_pressed:
 		get_tree().change_scene_to_file("res://scenes/levels/lvl3/Level_3_p1.tscn")	
+		
+	if back.button_pressed:
+		get_tree().change_scene_to_file("res://scenes/GUI/main_menu.tscn")
 	
 	pass

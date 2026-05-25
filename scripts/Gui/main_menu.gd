@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	if play.button_pressed:
 		get_tree().change_scene_to_file("res://scenes/GUI/selec_levels.tscn")
 		
-	if play.button_pressed:
-		get_tree().change_scene_to_file("")
+	if play_2.button_pressed:
+		get_tree().change_scene_to_file("res://scenes/levels/lvl_2_players/Level_2_players.tscn")
 	
 	pass
