@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b376wolldxndl" path="res://sprites/cars/car_blue_small_1.png" id="4_sx1ni"]
 [ext_resource type="Texture2D" uid="uid://hxrwv87d3ygk" path="res://sprites/cars/car_green_small_1.png" id="5_ma1qi"]
 [ext_resource type="Texture2D" uid="uid://bumlhhetubf8g" path="res://sprites/cars/car_red_small_1.png" id="6_g7dhe"]
+[ext_resource type="Texture2D" uid="uid://oegvub4y07l1" path="res://sprites/cars/car_yellow_small_1.png" id="8_dpv88"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v3sgl"]
 font = ExtResource("2_dfumm")
@@ -43,6 +44,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"car_red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dpv88")
+}],
+"loop": true,
+"name": &"car_yellow",
 "speed": 5.0
 }]
 
@@ -167,4 +176,4 @@ vertical_alignment = 1
 position = Vector2(320, 120)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_nfvl7")
-animation = &"car_red"
+animation = &"car_yellow"

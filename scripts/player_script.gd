@@ -30,6 +30,8 @@ func _ready() -> void:
 			sprite.animation = "car_green"
 		4:
 			sprite.animation = "car_red"
+		5: 
+			sprite.animation = "car_yellow"
 
 
 func _physics_process(delta: float) -> void:

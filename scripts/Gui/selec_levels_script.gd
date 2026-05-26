@@ -30,6 +30,9 @@ func _process(delta: float) -> void:
 			skin_show.animation = "car_green"
 		4:
 			skin_show.animation = "car_red"
+		5:
+			skin_show.animation = "car_yellow"
+				
 	
 	if next_skin.button_pressed:
 		next_was_press = true
@@ -44,10 +47,10 @@ func _process(delta: float) -> void:
 		GameManager.player_1_skin -= 1
 		back_was_press = false
 	
-	if GameManager.player_1_skin > 4:
+	if GameManager.player_1_skin > 5:
 		GameManager.player_1_skin = 1
 	elif GameManager.player_1_skin < 1:
-		GameManager.player_1_skin = 4
+		GameManager.player_1_skin = 5
 		
 	if lvl_1.button_pressed:
 		get_tree().change_scene_to_file("res://scenes/levels/lvl1/Level_1_p1.tscn")
