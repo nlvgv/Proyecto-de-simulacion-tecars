@@ -43,3 +43,12 @@ sprite_frames = SubResource("SpriteFrames_bcfqo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2017900936]
 shape = SubResource("RectangleShape2D_u4pg3")
+
+[node name="RespawnTimer" type="Timer" parent="Area2D" unique_id=227910620]
+one_shot = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1945668357]
+position = Vector2(-4, 6)
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1614512143]
+position = Vector2(-6, -2)
